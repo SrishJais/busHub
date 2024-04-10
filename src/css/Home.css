@@ -1,0 +1,135 @@
+.Homepage{
+  display: flex;
+}
+.Homebg{
+    width: 100%;
+    height: 89.5vh;
+    background-size: cover;
+}
+.Homebg img{
+    height: 500px;
+}
+.Text_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.Hometext{
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    left: 36%;
+    /* bottom: 20%; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 7px;
+}
+.question{
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+}
+.ans_opt{
+    display: flex;
+    gap: 15px;
+}
+.homebut{
+    background-color: goldenrod;
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    padding: 3px;
+}
+.homebut:hover{
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.aboutwebsite{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 20px; 
+    margin-top: 30px;
+}
+.explorediv{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+.explorebut{
+    background-color: rgb(18, 185, 182);
+    color: white;
+    font-weight: bold;
+}
+.explorebut:hover{
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+    .Homebg{
+        height: 99vh;
+    }
+    .Hometext{
+        left: 0.3%;
+    }
+    .explorediv{
+        top: 330px;
+    }
+}
+
+@media only screen and (min-width: 321px) and  (max-width: 375px){
+    .Homebg{
+        height: 93vh;
+    }
+    .Hometext{
+        left: 4%;
+    }
+    .aboutwebsite{
+        padding: 13px; 
+        margin-top: 15px;
+    }
+    .explorediv{
+        top: 240px;
+    }
+}
+
+@media only screen and (min-width: 376px) and  (max-width: 425px){
+    .Homebg{
+        height: 94.7vh;
+    }
+    .Hometext{
+        left: 7.5%;
+    }
+    .aboutwebsite{
+        padding: 20px; 
+        margin-top: 30px;
+    }
+    .explorediv{
+        top: 270px;
+    }
+}
+
+@media only screen and (min-width: 426px) and  (max-width: 768px){
+    .Homebg{
+        height: 95.4vh;
+    }
+    .Hometext{
+        left: 27%;
+    }
+    .aboutwebsite{
+        padding: 20px; 
+        margin-top: 50px;
+    }
+}

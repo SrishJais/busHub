@@ -1,7 +1,7 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 //import components (req)
-import SideDrawer from "./components/SideDrawer";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -15,25 +15,23 @@ import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<SideDrawer />}>
-          {/* Nested routes */}
-          <Route path="/home" element={<Home />} />
+    <>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
-
           <Route path="/about" element={<About />} />
           <Route path="/bustrack" element={<BusTrack />} />
-          <Route path="/managebus" element={<ManageBus />} />
-          <Route path="/manageroutes" element={<ManageRoutes />} />
+          <Route path="/manageBus" element={<ManageBus />} />
+          <Route path="/manageRoutes" element={<ManageRoutes />} />
           <Route path="/contact" element={<Contact />} />
-        </Route>
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </div>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+        </>
   );
 }
 
 export default App;
+

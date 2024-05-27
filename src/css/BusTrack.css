@@ -1,0 +1,19 @@
+.busTrackItem{
+    border-left: 5px solid rgb(18, 185, 182);
+  }
+  /* profileitem label  */
+.busTrackItem_label {
+  color:grey;
+
+}
+.busTrackItemContent{
+  color:rgb(18, 185, 182);
+  font-weight:bold;
+}
+/*profile update btn  */
+#travelHistorySaveBtn,#nearbyBusDetailsBtn{
+  background-color:rgb(18, 185, 182);
+}
+#travelHistorySaveBtn:focus,#nearbyBusDetailsBtn:focus{
+  outline-color: grey;
+}

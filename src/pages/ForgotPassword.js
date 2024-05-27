@@ -70,7 +70,7 @@ const ForgotPassword = () => {
       id="forgotPassword_page"
       className="row d-flex justify-content-center align-items-center"
     >
-      <div className="col-md-6 col-lg-4">
+      <div className="col-md-6 col-lg-3">
         <Paper component={Box} p={3} m={1}>
           {/*_________login heading___________ */}
           <div className="text-center py-2" id="forgotPassword_heading">

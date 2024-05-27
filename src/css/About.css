@@ -1,8 +1,7 @@
 .about .abt_heading {
-    margin-top: 10px;
     display: flex;
     justify-content: center;
-    color: rgb(85, 150, 246);
+    color: rgb(18, 185, 182);
     font-size: 23px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }

@@ -1,0 +1,14 @@
+/*profile update btn  */
+#addupdateBusBtn{
+    background-color:rgb(18, 185, 182);
+}
+#addUpdateModalCancelBtn{
+    background-color:rgb(18, 185, 182);
+    color:white;
+
+}
+/* __________________form input section___________________  */
+.addUpdateInputLabel{
+    font-weight: bold;
+    color:rgb(18, 185, 182);
+}

@@ -1,0 +1,25 @@
+/* ___________________Bus info item__________________________  */
+/* bus info items */
+.busInfoItem{
+    border-left: 5px solid rgb(18, 185, 182);
+  }
+  /* icons  */
+.busItemIcon{
+    background-color:black;
+    color:rgb(18, 185, 182);
+    border-radius:50%;
+  }
+  /* profileitem label  */
+  .busInfoItem_label{
+    color:grey;
+  }
+  /* myprofile_heading*/
+.busInfoItem_content{
+    font-weight:bolder;
+    color:rgb(18, 185, 182);
+  }
+/*active class*/
+.activeBusStatus{
+  font-weight:bolder;
+  color:#e02546;
+}

@@ -1,0 +1,14 @@
+/* left drawer menu icon  */
+.drawerMenuIcon{
+    min-width: 45px;
+    font-size: 37px;
+}
+/* left drawer menu item */
+.drawer_nav-item {
+    color:  rgb(18, 185, 182);
+    font-size: 18px;
+  }
+  .drawer_nav-item:hover {
+    text-decoration: none;
+    color: black;
+  }

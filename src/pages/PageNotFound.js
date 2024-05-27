@@ -3,7 +3,7 @@ import "../css/PageNotFound.css";
 //import from package
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Button, Paper } from "@mui/material";
+import { Box, Button, Paper, Typography } from "@mui/material";
 
 const PageNotFound = () => {
   return (
@@ -12,21 +12,17 @@ const PageNotFound = () => {
       className="row d-flex justify-content-center align-items-center"
     >
       <div className="col-md-6">
-        <Paper
-          component={Box}
-          p={3}
-          m={1}
-          className="text-center"
-          id="pageNotFound_section"
-        >
+        <Paper component={Box} p={3} m={1} className="text-center">
           {/* pageNotFound_heading */}
           <div className="py-2" id="pageNotFound_heading">
             404
           </div>
 
-          <p>oops! Page not found</p>
+          <Typography variant="h5">Oops! Page not found</Typography>
           <div id="oops_subheading">
-            <h6>The page you are looking for does not exist.</h6>
+            <Typography variant="subtitle1">
+              The page you are looking for does not exist or you don't have access to this page.
+            </Typography>
           </div>
           {/* Go back to Home page btn */}
           <div>

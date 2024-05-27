@@ -7,7 +7,7 @@
 #signup_heading {
   font-weight: bolder;
   font-size: 28px;
-  color: rgb(82, 116, 185);
+  color: rgb(18, 185, 182);
 }
 /* ____________________input field____________________ */
 #standard-basic1,
@@ -40,5 +40,5 @@
 /* ____________________login btn_______________________ */
 #signup_btn {
   font-weight: bold;
-  background-color: rgb(82, 116, 185);
+  background-color:rgb(18, 185, 182);
 }

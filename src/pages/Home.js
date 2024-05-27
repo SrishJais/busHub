@@ -12,8 +12,8 @@ const Home = () => {
       <img className="Homebg" src={bgBus} alt="" />
 
       <div className="aboutwebsite">
-        <Typography style={{fontSize: 5}}>
-          <h2>Navigate your way with Real-Time Bus Tracking</h2>
+        <Typography variant="h6">
+          Navigate your way with Real-Time Bus Tracking
         </Typography>
         <Typography>
           <b>

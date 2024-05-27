@@ -5,7 +5,7 @@
 }
 /* Link component of router */
 .link_comp {
-  color: rgb(82, 116, 185);
+  color: rgb(18, 185, 182);
 }
 .link_comp:hover {
   text-decoration: none;

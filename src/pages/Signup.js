@@ -135,7 +135,7 @@ const Signup = () => {
       id="signup_page"
       className="row d-flex justify-content-center align-items-center"
     >
-      <div className="col-md-6 col-lg-4">
+      <div className="col-md-6 col-lg-3">
         <Paper component={Box} p={3} m={1}>
           {/*_____________________________________________________________signup heading___________________________________________ */}
           <div className="text-center py-2" id="signup_heading">

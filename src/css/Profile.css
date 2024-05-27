@@ -1,0 +1,38 @@
+#profile_page {
+    height: 90vh;
+    background-color: #f4f5f6;
+}
+/* myprofile_heading*/
+#myprofile_heading{
+  font-weight:bold;
+}
+#profile_name,#profile_page{
+  font-weight:bold;
+  color:rgb(21, 105, 104);
+}
+.profileItem_content{
+  color:rgb(18, 185, 182);
+}
+/*profile update btn  */
+#profile_img,#updateProfileBtn{
+  background-color:rgb(18, 185, 182);
+}
+#updateProfileBtn:focus{
+  outline-color: grey;
+}
+/* profile items  */
+.profileItem{
+  border-left: 5px solid rgb(18, 185, 182);
+}
+.profileItemIcon{
+  background-color:black;
+  color:rgb(18, 185, 182);
+  border-radius:50%;
+}
+/* profileitem label  */
+.profileItem_label{
+  color:grey;
+
+}
+
+

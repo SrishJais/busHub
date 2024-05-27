@@ -1,81 +1,64 @@
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/*___________________________________________________navbar section____________________________________________________________*/
+#nav {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
   background-color: rgb(18, 185, 182);
-  padding: 3px 3px;
+
+/* navbar positon */
   position: sticky;
   top: 0;
   z-index: 1;
 }
-.navbar-brand{
-  color: white;
-  font-weight: bold;
-  padding: 0 15px;
-  display: flex;
+
+/*___________________________________________________ navbar logo and app name in desktop_______________________________________________ */
+#navbar_brand
+{
+  color:white;
 }
-.navbar-brand:hover{
+#navbar_brand:hover
+{
   color: black;
-}
-#navlinks{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#navlinks li{
-  list-style: none;
-  padding: 0 15px;
-  font-weight: bold;
-  padding-top: 8px;
-  position: relative;
-}
-.nav-item{
   text-decoration: none;
-  font-size: 1.1rem;
-  color: white;
-  transition: 0.2s ease-in-out;
 }
-.nav-item:hover{
-  text-decoration: none;
-  color: black;
-}
-.nav-item:hover::after{
-content: "";
-width: 30%;
-height: 2px;
-background: black;
-position: absolute;
-bottom: -3px;
-left: 20px;
-}
-#mobile{
-  display: none;
+/* app logo  */
+#app_logo{
+  width: 38px;
+  height: 40px;
 }
 
-@media screen and (max-width:769px){
-  #navlinks{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 47px;
-    right: -300px;
-    width: 200px;
-    height: 100vh;
-    background: rgb(18, 185, 182);
-    box-shadow: 0 30px rgb(92, 102, 127);
-    padding: 4px 0 0 10px;
-    transition: 0.3s ease-in-out
+/* app name  */
+#app_name:hover {
+  color: black;
+}
+/*___________________________________________________ nav menu in desktop _______________________________________________ */
+.nav-item {
+  color: white;
+}
+.nav-item:hover {
+  text-decoration: none;
+  color: black;
+}
+.nav-item:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: black;
+  position: absolute;
+  bottom: -3px;
+  left: 20px;
+}
+/* active state in nav menu */
+.nav-item.active {
+  color: black;
   }
-  #navlinks.active{
-    right: 0px;
-  }
-  #mobile{
-    display: block;
-  }
-  #mobile i{
-font-size: 24px;
-cursor: pointer;
-  }
+/*___________________________________________________ Nav login , profile section _______________________________________________ */
+/* login btn */
+#navLoginBtn{
+  color: rgb(18, 185, 182);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* nav profile avatar  */
+#navProfileAvatar{
+  color: rgb(18, 185, 182);
+  background-color: white;
 }

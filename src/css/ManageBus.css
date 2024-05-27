@@ -1,0 +1,49 @@
+#bus_page {
+    height: 80vh;
+    background-color: #f4f5f6;
+}
+/* busInfo_heading*/
+#busInfo_heading{
+    font-weight:bolder;
+}
+/* __________________ bus action icons ________________________ */
+/* add icon */
+#busAddIcon{
+    background-color: rgb(18, 185, 182);
+    color: white; 
+    z-index: 0;
+}
+#busEditIcon{
+    background-color:orange;
+    color: white; 
+    z-index: 0;
+}
+#busDeleteIcon{
+    background-color: #e02546;
+    color: white; 
+    font-size: 23px;
+    z-index: 0;
+}
+/* _________________________________________________________________  */
+#busBox{
+    border-radius:25px;
+}
+/* bus img avatar  */
+#bus_img{
+    background-color:#e9ecef;
+    margin-top: 16px;
+    margin-bottom: -40px;
+    padding:3px;
+}
+/* bus bg style  */
+#busBanner{
+    background-color: rgb(18, 185, 182);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+#busInfoIcon{
+    font-size: 30px;
+    color:rgb(18, 185, 182);
+}
+
+  

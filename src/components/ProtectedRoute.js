@@ -1,12 +1,15 @@
-import React from "react";
+//import useContext hook
+import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-// import useAuth from './useAuth';
-// import { useAuth } from "../myFirebase/myAuthFirebase";
+// Authentication
+import { useAuth } from "../myFirebase/myAuthFirebase";
+  //context api for userType
+import { userTypeContext } from "../App";
 
 const ProtectedRoute = ({ Cmp }) => {
-  // const { currentUser } = useAuth();
-  const currentUser = true;
-  const UserType = "passenger";
+  //context api for userType
+  const { userType} = useContext(userTypeContext);
+  const { currentUser } = useAuth();
 
   //if not login
   if (!currentUser) {
@@ -17,9 +20,9 @@ const ProtectedRoute = ({ Cmp }) => {
     // login + All
     (currentUser && Cmp.type.name === "Profile") || 
     // login + driver only
-    (currentUser && UserType === "driver" && Cmp.type.name === "ManageBus") ||
+    (currentUser && userType === "driver" && Cmp.type.name === "ManageBus") ||
     // login + passenger only
-    (currentUser && UserType === "passenger" && Cmp.type.name === "RideHistory")
+    (currentUser && userType === "passenger" && Cmp.type.name === "RideHistory")
   ) {
    
     return Cmp;

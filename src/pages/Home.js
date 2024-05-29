@@ -1,12 +1,23 @@
-import React from "react";
+//import useContext hook
+import React, { useContext } from "react";
 import bgBus from "../assets/photos/movelocationbus.gif";
 import "../css/Home.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 
+// Authentication
+import { useAuth } from "../myFirebase/myAuthFirebase";
+  //context api for userType
+  import { userTypeContext } from "../App";
+
 const Home = () => {
+  //context api for userType
+  const { userType, setUserType } = useContext(userTypeContext);
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <div className="Homepage">
       <img className="Homebg" src={bgBus} alt="" />
@@ -30,21 +41,25 @@ const Home = () => {
             <h1>Are you a _____ ?</h1>
           </div>
           <div className="ans_opt">
-            <Button className="explorebut" variant="outlined">
-              <Link
-                to="/login"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Passenger
-              </Link>
+            <Button
+              className="explorebut"
+              variant="outlined"
+              onClick={() => {
+                setUserType("passenger");
+                !currentUser ? navigate("../login") : navigate("../bustrack");
+              }}
+            >
+              Passenger
             </Button>
-            <Button className="explorebut" variant="outlined">
-              <Link
-                to="/login"
-                style={{ color: "white", textDecoration: "none" }}
-              >
-                Bus Operator
-              </Link>
+            <Button
+              className="explorebut"
+              variant="outlined"
+              onClick={() => {
+                setUserType("driver");
+                !currentUser ? navigate("../login") : navigate("../manageBus");
+              }}
+            >
+              Bus Operator
             </Button>
           </div>
         </div>

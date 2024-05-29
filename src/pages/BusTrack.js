@@ -1,4 +1,5 @@
-import React from "react";
+//import useContext hook
+import React, { useContext } from "react";
 import "../css/About.css";
 import "../css/BusTrack.css";
 
@@ -6,11 +7,18 @@ import { Box, Button, Divider, Paper, Typography } from "@mui/material";
 import BusIcon from "../assets/icons/busIcon.png";
 import Avatar from "@mui/material/Avatar";
 import { Link } from "react-router-dom";
+//for authentication
+import { useAuth } from "../myFirebase/myAuthFirebase";
+//context api for userType
+import { userTypeContext } from "../App";
+
 const BusTrack = () => {
+  //for authentication
+  const { currentUser } = useAuth();
 
- const id=123;
-
-
+  //context api for userType
+  const { userType } = useContext(userTypeContext);
+  const id = 123;
 
   return (
     // <div className='about'>
@@ -83,17 +91,20 @@ const BusTrack = () => {
                 {/* ______________________Save btn_____________________  */}
 
                 <div className="d-flex justify-content-end my-1" width="100%">
-                  <Link to="/saveridehistory" className="link_comp ">
-                    <Button
-                      id="travelHistorySaveBtn"
-                      variant="contained"
-                      p={2}
-                      style={{ borderRadius: "20px" }}
-                      className="mr-2"
-                    >
-                      SAVE
-                    </Button>
-                  </Link>
+                  {currentUser && userType === "passenger" && (
+                    <Link to="/saveridehistory" className="link_comp ">
+                      <Button
+                        id="travelHistorySaveBtn"
+                        variant="contained"
+                        p={2}
+                        style={{ borderRadius: "20px" }}
+                        className="mr-2"
+                      >
+                        SAVE
+                      </Button>
+                    </Link>
+                  )}
+
                   {/* ______________________More btn_____________________  */}
                   <Link to={`/details/${id}`} className="link_comp ">
                     <Button

@@ -20,10 +20,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaCity } from "react-icons/fa6";
 import { BsBusFront } from "react-icons/bs";
 const ManageBus = () => {
-  const activeStatus="Active";
+  const activeStatus = "Active";
 
   return (
-    
     // manage bus heading
     <div>
       <div className="about">
@@ -40,12 +39,10 @@ const ManageBus = () => {
       >
         <div className="col-md-6 col-lg-3">
           <div className="d-flex justify-content-end px-2">
-
-
             {/* ------------------------------------Bus actions icon section -----------------------------  */}
             <div>
-            {/* add icon & add/update bus details  */}
-              <AddUpdateBusModal/>
+              {/* add icon & add/update bus details  */}
+              <AddUpdateBusModal />
               {/* update/edit icon  */}
               <Fab
                 className="ml-2 muiIcon"
@@ -66,7 +63,7 @@ const ManageBus = () => {
               </Fab>
             </div>
           </div>
-        {/* ----------------------------------no bus info data section ------------------------------------  */}
+          {/* ----------------------------------no bus info data section ------------------------------------  */}
           {/* <Paper component={Box} p={4} m={1}>
             <div className="d-flex justify-content-center">
               <NoBusInfoImg />
@@ -88,34 +85,53 @@ const ManageBus = () => {
             </Typography>
           </Paper> */}
 
-{/* -----------------------Bus info banner section ------------------------------------  */}
+          {/* -----------------------Bus info banner section ------------------------------------  */}
           <Paper component={Box} id="busBox">
-          <div className="d-flex justify-content-center my-1 py-2" id="busBanner" >
-            <Avatar
-              id="bus_img"
-              src={Bus}
-              sx={{ width: 100, height: 100 }}
-            />
-          </div>
+            <div
+              className="d-flex justify-content-center my-1 py-2"
+              id="busBanner"
+            >
+              <Avatar id="bus_img" src={Bus} sx={{ width: 100, height: 100 }} />
+            </div>
 
             {/* ---------------------------Bus items section----------------------*/}
-          <div className="px-3 py-2 mt-4">
-          <div className="d-flex align-items-center">
-              <FaInfoCircle className="muiIcon mr-1" id="busInfoIcon" />
-              <Typography id="busInfo_heading" variant="body1">
-                BUS INFO
-              </Typography>
+            <div className="px-3 py-2 mt-4">
+              <div className="d-flex align-items-center">
+                <FaInfoCircle className="muiIcon mr-1" id="busInfoIcon" />
+                <Typography id="busInfo_heading" variant="body1">
+                  BUS INFO
+                </Typography>
+              </div>
+              {/* ______Bus items ______*/}
+              <BusItem
+                busInfoitem_label="Bus No."
+                busitem_content="5666767"
+                Iconcomp={<MdNumbers />}
+              />
+              <BusItem
+                busInfoitem_label="Registration Plate No."
+                busitem_content="19765RT"
+                Iconcomp={<BsBusFront />}
+              />
+
+              <BusItem
+                busInfoitem_label="Status"
+                busitem_content={activeStatus}
+                Iconcomp={
+                  activeStatus === "Active" ? (
+                    <FaLocationDot />
+                  ) : (
+                    <MdLocationOff />
+                  )
+                }
+              />
+
+              <BusItem
+                busInfoitem_label="Travel State"
+                busitem_content="West Bengal"
+                Iconcomp={<FaCity />}
+              />
             </div>
-            {/* ______Bus items ______*/}
-          <BusItem  busInfoitem_label="Bus No." busitem_content="5666767" Iconcomp={<MdNumbers />}/>
-          <BusItem  busInfoitem_label="Registration Plate No." busitem_content="19765RT" Iconcomp={<BsBusFront/>}/>
-
-          <BusItem  busInfoitem_label="Status" busitem_content={activeStatus} Iconcomp={activeStatus==="Active"?<FaLocationDot />:<MdLocationOff/> }/>
-
-          <BusItem  busInfoitem_label="Travel State" busitem_content="West Bengal" Iconcomp={<FaCity/>}/>
-
-
-          </div>
           </Paper>
         </div>
       </div>

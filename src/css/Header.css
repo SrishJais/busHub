@@ -35,20 +35,16 @@
 }
 .nav-item:hover {
   text-decoration: none;
-  color: black;
-}
-.nav-item:hover::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: black;
-  position: absolute;
-  bottom: -3px;
-  left: 20px;
+  background-color: black;
+  color:white;
 }
 /* active state in nav menu */
 .nav-item.active {
   color: black;
+  }
+  /* active state in nav menu */
+.nav-item.active:hover {
+  color: white;
   }
 /*___________________________________________________ Nav login , profile section _______________________________________________ */
 /* login btn */

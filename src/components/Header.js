@@ -58,7 +58,7 @@ function Header() {
   //Arrays for menuItems and Menu links
   const menuItems = ["Home", "Bus Info", "Track Bus", "About", "Contact"];
   //Arrays for myaccount profile items
-  const menuItemUrl = ["/", "/manageBus", "/bustrack", "/about", "/contact"];
+  const menuItemUrl = ["/", "/manageBus", "https://route-navigation.onrender.com/", "/about", "/contact"];
   const myAccountItem = ["Profile", "Logout"];
   const myAccountItemIcon = [
     <Avatar />,
